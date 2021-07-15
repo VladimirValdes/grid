@@ -63,5 +63,26 @@ html {
   display: grid;
   grid-template-columns: repeat(5, 20%);
   grid-template-rows: repeat(4, auto);
-  gap: 1rem 0.5rem;
+  /* gap: 1rem 0.5rem; */
+}
+
+.grid-explicit .item:nth-child(10) {
+  color: red;
+  grid-row: 2 / 3;
+  grid-column: 4 / 6;
+  /* grid-area: row start / column start /  row end /column end  */
+  grid-area: 2/4 3/6;
+}
+
+.grid-explicit .item:nth-child(12) {
+  color: red;
+  grid-row: span 2;
+  grid-column: span 3;
+  
+}
+
+.grid-line-names {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
 }
